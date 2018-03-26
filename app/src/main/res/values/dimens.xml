@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--RoundKornerRelativeLayout -->
+    <dimen name="round_margin_20">20dp</dimen>
+
+    <dimen name="radius_content">20dp</dimen>
+
+    <!--NYC Image -->
+    <dimen name="height">200dp</dimen>
+
+    <!--Round Logo/Title -->
+    <dimen name="logo_padding_25">25dp</dimen>
+    <dimen name="logo_textSize_large">40sp</dimen>
+    <dimen name="logo_textSize_small">30sp</dimen>
+
+    <!-- Questions -->
+    <dimen name="layout_margin_top">10dp</dimen>
+    <dimen name="layout_padding_bottom">60dp</dimen>
+    <dimen name="layout_padding_10">10dp</dimen>
+
+    <!--Text Size-->
+    <dimen name="text_size_20">20sp</dimen>
+    <dimen name="text_size_16">16sp</dimen>
+    <dimen name="text_size_18">18sp</dimen>
+    <dimen name="text_size_25">25sp</dimen>
+    <dimen name="text_size_30">30sp</dimen>
+    <dimen name="text_size_35">35sp</dimen>
+    <dimen name="text_size_70">70sp</dimen>
+
+    <!--Text Title-->
+    <dimen name="title_margin_16">16dp</dimen>
+    <dimen name="title_margin_top">10dp</dimen>
+    <dimen name="title_padding_bottomTop">10dp</dimen>
+
+    <!--View-->
+    <dimen name="view_margin_15">15dp</dimen>
+    <dimen name="view_height">1dp</dimen>
+
+    <!--Welcome Screen-->
+    <dimen name="alpha_9">0.9</dimen>
+    <dimen name="alpha_5">0.9</dimen>
+    <dimen name="image_marginBottom">130dp</dimen>
+    <dimen name="logoLayout_black_margin_top">100dp</dimen>
+    <dimen name="welcome_layout_margin_bottom">180dp</dimen>
+    <dimen name="edit_text_padding_top_30">30dp</dimen>
+
+    <!--Result Screen-->
+    <dimen name="radius_popup">30dp</dimen>
+    <dimen name="bg_popup_height">180dp</dimen>
+    <dimen name="popup_text_padding">10dp</dimen>
+    <dimen name="popup_button_marginButtom">15dp</dimen>
+
+</resources>

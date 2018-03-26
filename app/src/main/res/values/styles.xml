@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorPrimaryDark">@color/ColorBackgroundDarkGray</item>
+        <item name="android:windowBackground">@color/colorPrimary</item>
+    </style>
+
+    <style name="text" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="title" parent="TextAppearance.AppCompat">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/text_size_18</item>
+        <item name="android:paddingBottom">@dimen/title_padding_bottomTop</item>
+        <item name="android:paddingTop">@dimen/title_padding_bottomTop</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="image" parent="Theme.AppCompat.CompactMenu">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:scaleType">fitStart</item>
+        <item name="android:src">@drawable/yellow_bg</item>
+    </style>
+
+    <style name="logoImage" parent="Theme.AppCompat.CompactMenu">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/height</item>
+        <item name="android:background">@drawable/backround_cab_land</item>
+        <item name="android:scaleType">fitStart</item>
+    </style>
+
+    <style name="logoLayout">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:paddingLeft">@dimen/logo_padding_25</item>
+        <item name="android:paddingRight">@dimen/logo_padding_25</item>
+    </style>
+
+    <style name="logoLayout.white" parent="logoLayout">
+        <item name="android:layout_centerInParent">true</item>
+        <item name="android:background">@drawable/circle_white</item>
+    </style>
+
+    <style name="logoLayout.black" parent="logoLayout">
+        <item name="android:layout_alignParentTop">true</item>
+        <item name="android:layout_marginTop">@dimen/logoLayout_black_margin_top</item>
+        <item name="android:background">@drawable/circle_black</item>
+    </style>
+
+    <style name="logoTextBase">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/agencyr</item>
+    </style>
+
+    <style name="logoTextLarge" parent="logoTextBase">
+        <item name="android:textSize">@dimen/logo_textSize_large</item>
+        <item name="android:text">@string/nyc</item>
+    </style>
+
+    <style name="logoTextLarge.white" parent="logoTextLarge">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="logoTextLarge.black" parent="logoTextLarge">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="logoTextSmall" parent="logoTextBase">
+        <item name="android:textSize">@dimen/logo_textSize_small</item>
+        <item name="android:text">@string/quiz</item>
+    </style>
+
+    <style name="logoTextSmall.white" parent="logoTextSmall">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="logoTextSmall.black" parent="logoTextSmall">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="questionsLayout">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_below">@id/main_cab_image</item>
+        <item name="android:layout_marginTop">@dimen/layout_margin_top</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:paddingBottom">@dimen/layout_padding_bottom</item>
+        <item name="android:paddingLeft">@dimen/layout_padding_10</item>
+        <item name="android:paddingRight">@dimen/layout_padding_10</item>
+        <item name="android:textColor">@color/lightPink</item>
+    </style>
+
+    <style name="radioGroupHorizontal" parent="Theme.AppCompat.CompactMenu">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <style name="radioButtonHorizontal" parent="Theme.AppCompat.CompactMenu">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+
+    <style name="radioGroup" parent="Theme.AppCompat.CompactMenu">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="radioButton" parent="Theme.AppCompat.CompactMenu">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="roundCornerMain">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_margin">@dimen/round_margin_20</item>
+        <item name="android:background">@color/gray_light</item>
+    </style>
+    <style name="roundCornerMain.welcome">
+        <item name="android:background">@color/ColorBackgroundDarkGray</item>
+    </style>
+
+    <style name="roundCornerMain.popup">
+        <item name="android:layout_height">400dp</item>
+        <item name="android:layout_centerInParent">true</item>
+    </style>
+
+    <style name="roundCornerImage">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <style name="viewLine">
+        <item name="android:layout_marginBottom">@dimen/view_margin_15</item>
+        <item name="android:layout_marginTop">@dimen/view_margin_15</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/view_height</item>
+        <item name="android:background">@color/gray</item>
+    </style>
+
+    <style name="submitButton">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:text">@string/button_submit</item>
+        <item name="android:background">@color/colorAccent</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/text_size_18</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_gravity">bottom</item>
+        <item name="android:layout_alignParentBottom">true</item>
+    </style>
+
+    <style name="checkBoxTitle" parent="Theme.AppCompat.CompactMenu">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="checkBox" parent="Theme.AppCompat.CompactMenu">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="spinner" parent="Theme.AppCompat.CompactMenu">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="welcomeMainLayout" parent="Theme.AppCompat.CompactMenu">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:fontFamily">@font/agencyr</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:background">@color/ColorBackgroundDarkGray</item>
+        <item name="android:textSize">@dimen/text_size_35</item>
+    </style>
+
+    <style name="welcomeMainLayout.image" parent="Theme.AppCompat.CompactMenu">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:alpha">0.9</item>
+        <item name="android:layout_alignParentStart">true</item>
+        <item name="android:layout_marginBottom">@dimen/image_marginBottom</item>
+        <item name="android:scaleType">fitStart</item>
+        <item name="android:src">@drawable/welcome_triangle_bg</item>
+    </style>
+
+    <style name="welcomeMainLayout.logo" parent="Theme.AppCompat.CompactMenu">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_alignParentStart">true</item>
+        <item name="android:layout_marginBottom">@dimen/image_marginBottom</item>
+        <item name="android:scaleType">fitStart</item>
+        <item name="android:src">@drawable/welcome_triangle_bg</item>
+    </style>
+
+    <style name="welcomeMainLayout.layoutText">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_alignParentBottom">true</item>
+        <item name="android:layout_marginBottom">@dimen/welcome_layout_margin_bottom</item>
+        <item name="android:gravity">center</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="welcomeMainLayout.horizontalText">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <style name="welcomeMainLayout.textView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <style name="welcomeMainLayout.textView.yellow">
+        <item name="android:textColor">@color/colorAccent</item>
+        <item name="android:layout_marginStart">15dp</item>
+    </style>
+
+    <style name="welcomeMainLayout.textView.alpha">
+        <item name="android:alpha">0.8</item>
+        <item name="android:textSize">@dimen/text_size_30</item>
+    </style>
+
+    <style name="editText">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:paddingTop">@dimen/edit_text_padding_top_30</item>
+        <item name="android:backgroundTint">@color/colorAccent</item>
+        <item name="android:hint">@string/name</item>
+        <item name="android:textColorHighlight">@android:color/transparent</item>
+        <item name="android:textColorHint">@color/gray</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:inputType">textNoSuggestions|textVisiblePassword</item>
+        <item name="android:textSize">@dimen/text_size_25</item>
+    </style>
+
+    <style name="welcomeMainLayout.start">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@color/transparent</item>
+        <item name="android:textColor">@color/colorAccent</item>
+        <item name="android:layout_alignParentBottom">true</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:textSize">@dimen/text_size_35</item>
+    </style>
+
+    <style name="resultButton" parent="welcomeMainLayout.start">
+        <item name="android:layout_marginBottom">@dimen/popup_button_marginButtom</item>
+        <item name="android:text">@string/button_start_new</item>
+        <item name="android:textColor">@color/colorAccent</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/text_size_30</item>
+    </style>
+
+    <style name="resultMainLayout" parent="Theme.AppCompat.CompactMenu">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <style name="resultMainLayout.image">
+        <item name="android:alpha">@dimen/alpha_5</item>
+        <item name="android:background">@drawable/background_black_white2</item>
+    </style>
+
+    <style name="resultMainLayout.imagePopup">
+        <item name="android:layout_height">@dimen/bg_popup_height</item>
+        <item name="android:background">@drawable/result_bg_yellow</item>
+        <item name="android:scaleType">fitStart</item>
+    </style>
+
+    <style name="popup" parent="welcomeMainLayout.textView">
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:background">@color/transparent</item>
+        <item name="android:textColor">@color/gray_deep</item>
+    </style>
+
+    <style name="popup.title">
+        <item name="android:layout_below">@id/image</item>
+        <item name="android:text">@string/congrats</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="popup.scoreLayout" parent="popup">
+        <item name="android:layout_below">@id/textCongrats</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <style name="popup.scoreLayout.text">
+        <item name="android:padding">@dimen/popup_text_padding</item>
+        <item name="android:text">@string/score_text</item>
+        <item name="android:textSize">@dimen/text_size_30</item>
+    </style>
+
+    <style name="popup.scoreLayout.text.number">
+        <item name="android:text">@string/score_number</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="popup.scoreLayout.textSmall">
+        <item name="android:layout_below">@id/scoreLayout</item>
+        <item name="android:text">@string/out_of</item>
+        <item name="android:textSize">@dimen/text_size_20</item>
+    </style>
+</resources>

@@ -1,0 +1,121 @@
+<resources>
+    <string name="app_name">NYC Quiz</string>
+    <string name="nyc">NYC</string>
+    <string name="quiz">Quiz</string>
+    <string-array name="correctAnswersArray">
+        <item>@string/answer_q1_2</item><!--q1-->
+        <item>@string/answer_q2_3</item><!--q2-->
+        <item>@string/answer_q4_3</item><!--q4-->
+        <item>@string/answer_q5_1</item><!--q5-->
+        <item>@string/answer_q6_3</item><!--q6-->
+        <item>@string/answer_greenwich_village</item><!--q8-->
+        <item>@string/answer_upper_west_side</item><!--q9-->
+        <item>@string/answer_q10_3</item><!--q10-->
+    </string-array>
+    <string-array name="correctAnswersArray_Question3">
+        <item>@string/answer_q3_1</item><!--q3-->
+        <item>@string/answer_q3_2</item><!--q3-->
+    </string-array>
+    <string-array name="correctAnswersArray_Question7">
+        <item>@string/answer_q7_1</item><!--q7-->
+        <item>@string/answer_q7_3</item><!--q7-->
+    </string-array>
+    <string name="q1">How many avenues are there in NYC?</string>
+    <string name="answer_q1_1">7</string>
+    <string name="answer_q1_2">11</string>
+    <string name="answer_q1_3">9</string>
+    <string name="answer_q1_4">5</string>
+    <string name="q2">How many streets are there in NYC?</string>
+    <string name="answer_q2_1">30</string>
+    <string name="answer_q2_2">87</string>
+    <string name="answer_q2_3">214</string>
+    <string name="answer_q2_4">301</string>
+    <string name="q3">Which facts about NYC are true?</string>
+    <string name="answer_q3_1">It\'s the birth place of the "Cronut"</string>
+    <string name="answer_q3_2">It has 5 boroughs</string>
+    <string name="answer_q3_3">It used to be called New Rome</string>
+    <string name="answer_q3_4">The NYC NBA Team is name the NY</string>
+    <string name="q4">Which NYC skyscraper is tallest?</string>
+    <string name="answer_q4_1">Chrysler building</string>
+    <string name="answer_q4_2">Empire State building</string>
+    <string name="answer_q4_3">Freedom tower</string>
+    <string name="answer_q4_4">Bank of America building</string>
+    <string name="q5">On which side of Central Park is Columbus Circle?</string>
+    <string name="answer_q5_1">South-West</string>
+    <string name="answer_q5_2">South-East</string>
+    <string name="answer_q5_3">North</string>
+    <string name="answer_q5_4">East</string>
+    <string name="q6">What was NY\'s previous name?</string>
+    <string-array name="q6_array">
+        <item>@string/answer_q6_1</item>
+        <item>@string/answer_q6_2</item>
+        <item>@string/answer_q6_3</item>
+        <item>@string/answer_q6_4</item>
+    </string-array>
+    <string name="answer_q6_1">London</string>
+    <string name="answer_q6_2">New England</string>
+    <string name="answer_q6_3">New Amsterdam</string>
+    <string name="answer_q6_4">york</string>
+    <string name="q7">Who sings Empire State of Mind?</string>
+    <string name="answer_q7_1">Alicia Keys</string>
+    <string name="answer_q7_2">Madonna</string>
+    <string name="answer_q7_3">Jay Z</string>
+    <string name="answer_q7_4">Beyonce</string>
+    <string name="q8">In which NYC neighborhood did the show Friends take place?</string>
+    <string name="q9">In which NYC neighborhood did Jerry live in on the show Seinfeld?</string>
+    <string name="q10">What\'s the name of NYC\'s main financial area?</string>
+    <string name="answer_q10_1">Brick Street</string>
+    <string name="answer_q10_2">Money Lane</string>
+    <string name="answer_q10_3">Wall Street</string>
+    <string name="answer_q10_4">5th avenue</string>
+
+
+    <string name="answer_upper_west_side">Upper West Side</string>
+    <string name="answer_upper_east_side">Upper East Side</string>
+    <string name="answer_west_village">West Village</string>
+    <string name="answer_greenwich_village">Greenwich Village</string>
+
+    <string name="welcome_to">Welcome to</string>
+    <string name="nyc_quiz">NYC Quiz!</string>
+    <string name="lets_see">Let\'s see how well you know the city!</string>
+    <string name="name">ENTER YOUR NAME</string>
+    <string name="player_name">player name</string>
+    <string name="player_score">score</string>
+    <string name="button_start">start</string>
+    <string name="button_start_new">new game</string>
+    <string name="button_submit">submit</string>
+    <string name="contentDescription">yellow background</string>
+    <string name="validation_emptyName">Name cannot be empty</string>
+    <string name="validation_error">Not all the questions was answered</string>
+    <string name="Q">q</string>
+
+    <!--Popup-->
+    <string name="congrats">Congrats, %s</string>
+    <string name="score_text">Your final score is: </string>
+    <string name="score_number">X</string>
+    <string name="out_of">You got %d out of %d questions right</string>
+
+    <!--Config-->
+    <string name="number_of_questions">10</string>
+
+    <!--STATE-->
+    <string name="STATE_Q1">STATE_Q1</string>
+    <string name="STATE_Q2">STATE_Q2</string>
+    <string name="STATE_Q3_1">STATE_Q3_1</string>
+    <string name="STATE_Q3_2">STATE_Q3_2</string>
+    <string name="STATE_Q3_3">STATE_Q3_3</string>
+    <string name="STATE_Q3_4">STATE_Q3_4</string>
+    <string name="STATE_Q4">STATE_Q4</string>
+    <string name="STATE_Q5">STATE_Q5</string>
+    <string name="STATE_Q6">STATE_Q6</string>
+    <string name="STATE_Q7_1">STATE_Q7_1</string>
+    <string name="STATE_Q7_2">STATE_Q7_2</string>
+    <string name="STATE_Q7_3">STATE_Q7_3</string>
+    <string name="STATE_Q7_4">STATE_Q7_4</string>
+    <string name="STATE_Q8">STATE_Q8</string>
+    <string name="STATE_Q9">STATE_Q9</string>
+    <string name="STATE_Q10">STATE_Q10</string>
+
+
+
+</resources>

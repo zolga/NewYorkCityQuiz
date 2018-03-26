@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#D8D5D8</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FCD908</color>
+    <color name="ColorBackgroundDarkGray">#212121</color>
+    <color name="ColorTextLightWhite">#FAFAFA</color>
+    <color name="colorLightGray">#9b9999</color>
+    <color name="colorGray">#393737</color>
+    <color name="colorGrayWithTransparent">#93413f3f</color>
+    <color name="transparent_white">#F2ffffff</color>
+    <color name="lightPink">#fd538f</color>
+    <color name="darkPink">#f7236d</color>
+    <color name="primaryGreen">#00f5fd</color>
+    <color name="primaryBackground">#070f22</color>
+
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="gray">#999999</color>
+    <color name="gray_light">#FCFCFC</color>
+    <color name="gray_very_light">#e0e0e0</color>
+    <color name="gray_deep">#666666</color>
+    <color name="black_overlay">#66000000</color>
+    <color name="activity_background">#EEEEEE</color>
+    <color name="transparent">#00000000</color>
+    <color name="main_background">#eeeeee</color>
+    <color name="google_assistant_background">#F5F5F5</color>
+    <color name="dark_bg">#020202</color>
+
+</resources>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/welcomeMainLayout"
+    tools:context="com.olgazelenko.nycquiz.MainActivity">
+    <ImageView
+        style="@style/image"
+        android:contentDescription="@string/contentDescription" />
+
+
+    <com.jcminarro.roundkornerlayout.RoundKornerRelativeLayout
+        style="@style/roundCornerMain.welcome"
+        app:corner_radius="@dimen/radius_content">
+
+    <ImageView
+        android:id="@+id/image"
+        style="@style/welcomeMainLayout.image" />
+
+        <LinearLayout
+            android:id="@+id/logo"
+            android:layout_marginTop="50dp"
+            android:layout_centerHorizontal="true"
+            style="@style/logoLayout.black">
+
+            <TextView
+                android:id="@+id/nyc_text"
+                style="@style/logoTextLarge.black" />
+
+            <TextView
+                android:id="@+id/quiz_text"
+                style="@style/logoTextSmall.black" />
+
+        </LinearLayout>
+    </com.jcminarro.roundkornerlayout.RoundKornerRelativeLayout>
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        style="@style/welcomeMainLayout.layoutText">
+
+        <LinearLayout
+            android:id="@+id/welcomeTxt"
+            style="@style/welcomeMainLayout.horizontalText">
+
+            <TextView
+                android:id="@+id/textView"
+                style="@style/welcomeMainLayout.textView"
+                android:text="@string/welcome_to" />
+
+            <TextView
+                style="@style/welcomeMainLayout.textView.yellow"
+                android:text="@string/nyc_quiz" />
+        </LinearLayout>
+
+        <TextView
+            style="@style/welcomeMainLayout.textView.alpha"
+            android:text="@string/lets_see" />
+
+        <EditText
+            android:id="@+id/name"
+            style="@style/editText" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/start"
+        style="@style/welcomeMainLayout.start"
+        android:text="@string/button_start"
+        android:onClick="start"/>
+</RelativeLayout>
+
+
