@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.olgazelenko.nycquiz.MainActivity">
+    tools:context="com.olgazelenko.nycquiz.ResultActivity">
 
     <RelativeLayout style="@style/resultMainLayout">
 
@@ -43,7 +43,7 @@
             <Button
                 android:id="@+id/start"
                 style="@style/resultButton"
-                android:onClick="newGame" />
+                android:onClick="startNewGame" />
 
         </com.jcminarro.roundkornerlayout.RoundKornerRelativeLayout>
 

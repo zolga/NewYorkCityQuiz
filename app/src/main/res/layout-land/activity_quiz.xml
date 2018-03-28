@@ -8,7 +8,7 @@
     tools:context="com.olgazelenko.nycquiz.QuizActivity">
 
     <ImageView
-        style="@style/image"
+        style="@style/imageLand"
         android:contentDescription="@string/contentDescription" />
 
     <com.jcminarro.roundkornerlayout.RoundKornerRelativeLayout

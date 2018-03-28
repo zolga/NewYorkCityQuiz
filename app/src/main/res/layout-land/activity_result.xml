@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.olgazelenko.nycquiz.ResultActivity">
+
+    <RelativeLayout style="@style/resultMainLayout">
+
+        <ImageView style="@style/resultMainLayout.image" />
+
+        <com.jcminarro.roundkornerlayout.RoundKornerRelativeLayout
+            android:id="@+id/roundKornerRelativeLayout"
+            style="@style/roundCornerMain.popup"
+            android:layout_width="300dp"
+            app:corner_radius="@dimen/radius_popup">
+
+            <ImageView
+                android:id="@+id/image"
+                style="@style/resultMainLayout.imagePopup"
+                android:layout_height="150dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/image"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textCongrats"
+                    style="@style/popup.title"
+                    android:layout_width="match_parent"
+                    android:layout_gravity="start"
+                    android:gravity="center" />
+
+                <LinearLayout
+                    android:id="@+id/scoreLayout"
+                    style="@style/popup.scoreLayout">
+
+                    <TextView
+                        android:id="@+id/finalScore"
+                        style="@style/scoreLayoutLand.text" />
+
+                    <TextView
+                        android:id="@+id/theScore"
+                        style="@style/popup.scoreLayout.text.number" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/outOf"
+                    style="@style/popup.scoreLayout.textSmall" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/start"
+                style="@style/resultButtonLand"
+                android:onClick="startNewGame" />
+
+        </com.jcminarro.roundkornerlayout.RoundKornerRelativeLayout>
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>
+
+

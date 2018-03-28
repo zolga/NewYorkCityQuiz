@@ -7,7 +7,7 @@
         <item>@string/answer_q2_3</item><!--q2-->
         <item>@string/answer_q4_3</item><!--q4-->
         <item>@string/answer_q5_1</item><!--q5-->
-        <item>@string/answer_q6_3</item><!--q6-->
+        <item>@string/answer_q6_3</item><!--q5-->
         <item>@string/answer_greenwich_village</item><!--q8-->
         <item>@string/answer_upper_west_side</item><!--q9-->
         <item>@string/answer_q10_3</item><!--q10-->
@@ -99,6 +99,7 @@
     <string name="number_of_questions">10</string>
 
     <!--STATE-->
+    <string name="STATE_PLAYER_NAME">PLAYER_NAME</string>
     <string name="STATE_Q1">STATE_Q1</string>
     <string name="STATE_Q2">STATE_Q2</string>
     <string name="STATE_Q3_1">STATE_Q3_1</string>
@@ -109,13 +110,18 @@
     <string name="STATE_Q5">STATE_Q5</string>
     <string name="STATE_Q6">STATE_Q6</string>
     <string name="STATE_Q7_1">STATE_Q7_1</string>
-    <string name="STATE_Q7_2">STATE_Q7_2</string>
-    <string name="STATE_Q7_3">STATE_Q7_3</string>
+    <string name="STATE_Q7_2">STATE_Q7_1</string>
+    <string name="STATE_Q7_3">STATE_Q7_1</string>
     <string name="STATE_Q7_4">STATE_Q7_4</string>
     <string name="STATE_Q8">STATE_Q8</string>
     <string name="STATE_Q9">STATE_Q9</string>
     <string name="STATE_Q10">STATE_Q10</string>
 
+    <!--LOG-->
+    <string name="LOG_ONRESTORE_ERROR">error in onRestoreInstanceState method</string>
+
+    <!--Activity Names-->
+    <string name="quiz_activity_name">QuizActivity</string>
 
 
 </resources>

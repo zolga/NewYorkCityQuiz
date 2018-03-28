@@ -3,6 +3,7 @@ package com.olgazelenko.nycquiz;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.CheckBox;
@@ -11,68 +12,61 @@ import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.Toast;
 
-import java.util.Dictionary;
-import java.util.HashMap;
-import java.util.Map;
-
-/**
- * Created by HOME on 24/03/2018.
- */
 public class QuizActivity extends AppCompatActivity {
-    private int layoutId = R.layout.activity_quiz;
+    private final String STATE_PLAYER_NAME = "PLAYER_NAME";
+    private final String STATE_SCORE = "SCORE";
+    private final String STATE_Q1 = "STATE_Q1";
+    private final String STATE_Q2 = "STATE_Q2";
+    private final String STATE_Q4 = "STATE_Q4";
+    private final String STATE_Q5 = "STATE_Q5";
+    private final String STATE_Q8 = "STATE_Q8";
+    private final String STATE_Q9 = "STATE_Q9";
+    private final String STATE_Q10 = "STATE_Q10";
     private RadioGroup q1, q2, q4, q5, q8, q9, q10;
     private CheckBox q3_1, q3_2, q3_3, q3_4, q7_1, q7_2, q7_3, q7_4;
     private Spinner spinner_q6;
     private String playerName;
     private String[] correctAnswers;
-    private String[] correctAnswers_q3;
-    private String[] correctAnswers_q7;
-    int totalCorrect;
-    int questionNumber;
-    private final String STATE_PLAYER_NAME = getString(R.string.player_name);
-    private final String STATE_SCORE = getString(R.string.player_score);
-    private final String STATE_Q1 = getString(R.string.STATE_Q1);
-    private final String STATE_Q2 = getString(R.string.STATE_Q2);
-    private final String STATE_Q3_1 = getString(R.string.STATE_Q3_1);
-    private final String STATE_Q3_2 = getString(R.string.STATE_Q3_2);
-    private final String STATE_Q3_3 = getString(R.string.STATE_Q3_3);
-    private final String STATE_Q3_4 = getString(R.string.STATE_Q3_4);
-    private final String STATE_Q4 = getString(R.string.STATE_Q4);
-    private final String STATE_Q5 = getString(R.string.STATE_Q5);
-    private final String STATE_Q6 = getString(R.string.STATE_Q6);
-    private final String STATE_Q7_1 = getString(R.string.STATE_Q7_1);
-    private final String STATE_Q7_2 = getString(R.string.STATE_Q7_2);
-    private final String STATE_Q7_3 = getString(R.string.STATE_Q7_3);
-    private final String STATE_Q7_4 = getString(R.string.STATE_Q7_4);
-    private final String STATE_Q8 = getString(R.string.STATE_Q8);
-    private final String STATE_Q9 = getString(R.string.STATE_Q9);
-    private final String STATE_Q10 = getString(R.string.STATE_Q10);
-
+    private int totalCorrect;
+    private int questionNumber;
 
     @Override
-    protected void onSaveInstanceState(Bundle outState) {
-        super.onSaveInstanceState(outState);
-//        outState.putInt(STATE_PRICE, orderPrice);
-//        outState.putInt(STATE_QUANTITY, quantity);
-//        outState.putBoolean(STATE_CHECK_BOX_WHIPPED_CREAM, whippedCreamCheckBox.isChecked());
-//        outState.putBoolean(STATE_CHECK_BOX_CHOCOLATE, chocolateCheckBox.isChecked());
-//        outState.putString(STATE_USER_NAME, nameEditText.getText().toString());
+    protected void onSaveInstanceState(Bundle savedInstanceState) {
+        super.onSaveInstanceState(savedInstanceState);
+        //save checked radio buttons
+        savedInstanceState.putString(STATE_PLAYER_NAME, playerName);
+        savedInstanceState.putInt(STATE_Q1, q1.getCheckedRadioButtonId());
+        savedInstanceState.putInt(STATE_Q2, q2.getCheckedRadioButtonId());
+        savedInstanceState.putInt(STATE_Q4, q4.getCheckedRadioButtonId());
+        savedInstanceState.putInt(STATE_Q5, q5.getCheckedRadioButtonId());
+        savedInstanceState.putInt(STATE_Q8, q8.getCheckedRadioButtonId());
+        savedInstanceState.putInt(STATE_Q9, q9.getCheckedRadioButtonId());
+        savedInstanceState.putInt(STATE_Q10, q10.getCheckedRadioButtonId());
     }
 
     @Override
     protected void onRestoreInstanceState(Bundle savedInstanceState) {
         super.onRestoreInstanceState(savedInstanceState);
-//        orderPrice = savedInstanceState.getInt(STATE_PRICE);
-//        quantity = savedInstanceState.getInt(STATE_QUANTITY);
-//        whippedCreamCheckBox.setChecked(savedInstanceState.getBoolean(STATE_CHECK_BOX_WHIPPED_CREAM));
-//        chocolateCheckBox.setChecked(savedInstanceState.getBoolean(STATE_CHECK_BOX_CHOCOLATE));
-//        nameEditText.setText(savedInstanceState.getString(STATE_USER_NAME));
-//        setQuantityAndPrice();
+        playerName = savedInstanceState.getString(STATE_PLAYER_NAME);
+        //restore checked radio buttons
+        try {
+            q1.check(savedInstanceState.getInt(STATE_Q1));
+            q2.check(savedInstanceState.getInt(STATE_Q2));
+            q4.check(savedInstanceState.getInt(STATE_Q4));
+            q5.check(savedInstanceState.getInt(STATE_Q5));
+            q8.check(savedInstanceState.getInt(STATE_Q8));
+            q9.check(savedInstanceState.getInt(STATE_Q9));
+            q10.check(savedInstanceState.getInt(STATE_Q10));
+        } catch (Exception e) {
+            Log.v(getString(R.string.quiz_activity_name), getString(R.string.LOG_ONRESTORE_ERROR));
+        }
+
     }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        int layoutId = R.layout.activity_quiz;
         setContentView(layoutId);
         initialStates(getIntent());
     }
@@ -81,7 +75,7 @@ public class QuizActivity extends AppCompatActivity {
      * This method is called from the onCreate method and initial all the global variables.
      */
     private void initialStates(Intent intent) {
-        playerName = intent.getExtras().getString(String.valueOf(R.string.player_name));
+        playerName = intent.getStringExtra(STATE_PLAYER_NAME);
         totalCorrect = 0;
         questionNumber = 0;
         //RadioButton
@@ -93,10 +87,10 @@ public class QuizActivity extends AppCompatActivity {
         q9 = findViewById(R.id.q9);
         q10 = findViewById(R.id.q10);
         //CheckBox Q3
-        q3_1 =  findViewById(R.id.q3_1);
-        q3_2 =  findViewById(R.id.q3_2);
-        q3_3 =  findViewById(R.id.q3_3);
-        q3_4 =  findViewById(R.id.q3_4);
+        q3_1 = findViewById(R.id.q3_1);
+        q3_2 = findViewById(R.id.q3_2);
+        q3_3 = findViewById(R.id.q3_3);
+        q3_4 = findViewById(R.id.q3_4);
         //CheckBox Q7
         q7_1 = findViewById(R.id.q7_1);
         q7_2 = findViewById(R.id.q7_2);
@@ -110,8 +104,6 @@ public class QuizActivity extends AppCompatActivity {
 
     private void FillCorrectAnswersList() {
         correctAnswers = getResources().getStringArray(R.array.correctAnswersArray);
-        correctAnswers_q3 = getResources().getStringArray(R.array.correctAnswersArray_Question3);
-        correctAnswers_q7 = getResources().getStringArray(R.array.correctAnswersArray_Question7);
     }
 
     private void initSpinner() {
@@ -123,7 +115,7 @@ public class QuizActivity extends AppCompatActivity {
 
     public void submit(View view) {
         totalCorrect = getTotalCorrectAnswers();
-        if(totalCorrect < 0)
+        if (totalCorrect < 0)
             return;
         Intent intent = new Intent(this, ResultActivity.class);
         intent.putExtra(STATE_PLAYER_NAME, playerName);
@@ -134,43 +126,43 @@ public class QuizActivity extends AppCompatActivity {
     private int getTotalCorrectAnswers() {
         questionNumber = 0;
         try {
-            checkRadioButtonAnswer(questionNumber, q1);
-            checkRadioButtonAnswer(questionNumber, q2);
+            checkRadioButtonAnswer(q1);
+            checkRadioButtonAnswer(q2);
 
-            if(q3_1.isChecked() && q3_2.isChecked() && !q3_3.isChecked() && !q3_4.isChecked())
+            if (q3_1.isChecked() && q3_2.isChecked() && !q3_3.isChecked() && !q3_4.isChecked())
                 totalCorrect++;
 
-            checkRadioButtonAnswer(questionNumber, q4);
-            checkRadioButtonAnswer(questionNumber, q5);
+            checkRadioButtonAnswer(q4);
+            checkRadioButtonAnswer(q5);
 
             final String answer6 = spinner_q6.getSelectedItem().toString();
-            if (answer6.equals(correctAnswers[questionNumber]))
+            if (answer6.equals(correctAnswers[questionNumber])) {
+                totalCorrect++;
+                questionNumber++;
+            }
+            if (q7_1.isChecked() && q7_3.isChecked() && !q7_2.isChecked() && !q7_4.isChecked())
                 totalCorrect++;
 
-            if(q7_1.isChecked() && q7_3.isChecked() && !q7_2.isChecked() && !q7_4.isChecked())
-                totalCorrect++;
-
-            checkRadioButtonAnswer(questionNumber, q8);
-            checkRadioButtonAnswer(questionNumber, q9);
-            checkRadioButtonAnswer(questionNumber, q10);
+            checkRadioButtonAnswer(q8);
+            checkRadioButtonAnswer(q9);
+            checkRadioButtonAnswer(q10);
 
             return totalCorrect;
 
-        }   catch (Exception e)
-        {
+        } catch (Exception e) {
             Toast.makeText(this, R.string.validation_error, Toast.LENGTH_SHORT).show();
             return -1;
         }
     }
-    private void checkRadioButtonAnswer(int questionIdx, RadioGroup rg) {
-        final String answer = getCheckedRadioButtonId(rg).getText().toString();
-        if (answer.equals(correctAnswers[questionIdx]))
+
+    private void checkRadioButtonAnswer(RadioGroup rg) {
+        String answer = getCheckedRadioButtonId(rg).getText().toString();
+        if (answer.equals(correctAnswers[questionNumber]))
             totalCorrect++;
-        questionIdx++;
+        questionNumber++;
     }
 
-    private RadioButton getCheckedRadioButtonId(RadioGroup rg)
-    {
+    private RadioButton getCheckedRadioButtonId(RadioGroup rg) {
         return (RadioButton) findViewById(rg.getCheckedRadioButtonId());
     }
 

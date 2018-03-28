@@ -1,26 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    style="@style/welcomeMainLayout"
+    style="@style/welcomeMainLayout.land"
     tools:context="com.olgazelenko.nycquiz.MainActivity">
 
-    <ImageView
-        style="@style/image"
-        android:contentDescription="@string/contentDescription" />
-
-
     <com.jcminarro.roundkornerlayout.RoundKornerRelativeLayout
-        style="@style/roundCornerMain.welcome"
+        style="@style/roundCornerMain.welcomeLand"
         app:corner_radius="@dimen/radius_content">
-
-        <ImageView
-            android:id="@+id/image"
-            style="@style/welcomeMainLayout.image" />
 
         <LinearLayout
             android:id="@+id/logo"
-            style="@style/logoLayout.black">
+            style="@style/logoLayout.blackLand">
 
             <TextView
                 android:id="@+id/nyc_text"
@@ -36,7 +27,7 @@
 
     <LinearLayout
         android:id="@+id/linearLayout"
-        style="@style/welcomeMainLayout.layoutText">
+        style="@style/welcomeMainLayout.layoutTextLand">
 
         <LinearLayout
             android:id="@+id/welcomeTxt"
@@ -53,19 +44,20 @@
         </LinearLayout>
 
         <TextView
-            style="@style/welcomeMainLayout.textView.alpha"
+            style="@style/welcomeMainLayout.textViewAlpaLand"
             android:text="@string/lets_see" />
 
         <EditText
             android:id="@+id/name"
-            style="@style/editText" />
+            style="@style/editTextLand" />
+
+        <Button
+            android:id="@+id/start"
+            style="@style/startButton"
+            android:onClick="start" />
     </LinearLayout>
 
-    <Button
-        android:id="@+id/start"
-        style="@style/welcomeMainLayout.start"
-        android:onClick="start"
-        android:text="@string/button_start" />
-</RelativeLayout>
+
+</LinearLayout>
 
 

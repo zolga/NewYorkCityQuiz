@@ -29,6 +29,11 @@
         <item name="android:src">@drawable/yellow_bg</item>
     </style>
 
+    <style name="imageLand" parent="image">
+        <item name="android:scaleType">fitXY</item>
+        <item name="android:paddingBottom">@dimen/imageLand_padding_bottom</item>
+    </style>
+
     <style name="logoImage" parent="Theme.AppCompat.CompactMenu">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">@dimen/height</item>
@@ -51,8 +56,15 @@
     </style>
 
     <style name="logoLayout.black" parent="logoLayout">
+        <item name="android:layout_centerHorizontal">true</item>
         <item name="android:layout_alignParentTop">true</item>
         <item name="android:layout_marginTop">@dimen/logoLayout_black_margin_top</item>
+        <item name="android:background">@drawable/circle_black</item>
+    </style>
+
+    <style name="logoLayout.blackLand" parent="logoLayout.black">
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:layout_alignParentTop">true</item>
         <item name="android:background">@drawable/circle_black</item>
     </style>
 
@@ -129,8 +141,16 @@
         <item name="android:layout_margin">@dimen/round_margin_20</item>
         <item name="android:background">@color/gray_light</item>
     </style>
+
     <style name="roundCornerMain.welcome">
         <item name="android:background">@color/ColorBackgroundDarkGray</item>
+    </style>
+
+    <style name="roundCornerMain.welcomeLand" parent="roundCornerMain.welcome">
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:background">@drawable/background_black_white2</item>
     </style>
 
     <style name="roundCornerMain.popup">
@@ -190,6 +210,10 @@
         <item name="android:textSize">@dimen/text_size_35</item>
     </style>
 
+    <style name="welcomeMainLayout.land" parent="welcomeMainLayout">
+        <item name="android:orientation">horizontal</item>
+    </style>
+
     <style name="welcomeMainLayout.image" parent="Theme.AppCompat.CompactMenu">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
@@ -218,6 +242,17 @@
         <item name="android:orientation">vertical</item>
     </style>
 
+    <style name="welcomeMainLayout.layoutTextLand" parent="welcomeMainLayout.layoutText">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">@dimen/layoutTextLand_height</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">start</item>
+        <item name="android:paddingTop">@dimen/layoutTextLand_padding20</item>
+        <item name="android:paddingRight">@dimen/layoutTextLand_padding20</item>
+
+        <item name="android:orientation">vertical</item>
+    </style>
+
     <style name="welcomeMainLayout.horizontalText">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
@@ -242,6 +277,10 @@
         <item name="android:textSize">@dimen/text_size_30</item>
     </style>
 
+    <style name="welcomeMainLayout.textViewAlpaLand" parent="welcomeMainLayout.textView.alpha">
+        <item name="android:layout_marginTop">@dimen/textViewAlpaLand_margin_top</item>
+    </style>
+
     <style name="editText">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">match_parent</item>
@@ -257,6 +296,12 @@
         <item name="android:textSize">@dimen/text_size_25</item>
     </style>
 
+    <style name="editTextLand" parent="editText">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">@dimen/editTextLand_margin_top</item>
+    </style>
+
     <style name="welcomeMainLayout.start">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
@@ -264,7 +309,14 @@
         <item name="android:textColor">@color/colorAccent</item>
         <item name="android:layout_alignParentBottom">true</item>
         <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:layout_marginBottom">@dimen/start_button_margin_bottom</item>
         <item name="android:textSize">@dimen/text_size_35</item>
+    </style>
+
+    <style name="startButton" parent="welcomeMainLayout.start">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_marginTop">@dimen/editTextLand_margin_top</item>
+        <item name="android:text">@string/button_start</item>
     </style>
 
     <style name="resultButton" parent="welcomeMainLayout.start">
@@ -273,6 +325,10 @@
         <item name="android:textColor">@color/colorAccent</item>
         <item name="android:textStyle">bold</item>
         <item name="android:textSize">@dimen/text_size_30</item>
+    </style>
+
+    <style name="resultButtonLand" parent="resultButton">
+        <item name="android:layout_marginBottom">@dimen/popup_button_marginButtom_land</item>
     </style>
 
     <style name="resultMainLayout" parent="Theme.AppCompat.CompactMenu">
@@ -311,6 +367,11 @@
 
     <style name="popup.scoreLayout.text">
         <item name="android:padding">@dimen/popup_text_padding</item>
+        <item name="android:text">@string/score_text</item>
+        <item name="android:textSize">@dimen/text_size_30</item>
+    </style>
+
+    <style name="scoreLayoutLand.text" parent="popup.scoreLayout">
         <item name="android:text">@string/score_text</item>
         <item name="android:textSize">@dimen/text_size_30</item>
     </style>
