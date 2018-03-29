@@ -136,7 +136,7 @@
                         <CheckBox
                             android:id="@+id/q3_4"
                             style="@style/checkBox"
-                            android:text="@string/answer_q4_4" />
+                            android:text="@string/answer_q3_4" />
                     </LinearLayout>
 
                     <View style="@style/viewLine" />

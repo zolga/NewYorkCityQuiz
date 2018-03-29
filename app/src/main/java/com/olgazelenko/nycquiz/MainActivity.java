@@ -36,7 +36,6 @@ public class MainActivity extends AppCompatActivity {
 
     private void initialStates() {
         nameEditText = findViewById(R.id.name);
-        nameEditText.setInputType(InputType.TYPE_TEXT_VARIATION_FILTER);
     }
 
     public void start(View view) {
